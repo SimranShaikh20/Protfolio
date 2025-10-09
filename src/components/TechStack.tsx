@@ -29,6 +29,11 @@ const TechStack = () => {
     { name: 'Machine Learning', icon: 'fas fa-brain', proficiency: 75, category: 'concept' },
     { name: 'AI', icon: 'fas fa-robot', proficiency: 70, category: 'concept' },
     { name: 'LLM', icon: 'fas fa-robot', proficiency: 50, category: 'concept' },
+    { name: 'n8n', icon: 'fas fa-project-diagram', proficiency: 85, category: 'tool' },
+    { name: 'Zapier', icon: 'fas fa-bolt', proficiency: 80, category: 'tool' },
+    { name: 'Automation', icon: 'fas fa-cogs', proficiency: 85, category: 'concept' },
+    { name: 'Full Stack', icon: 'fas fa-layer-group', proficiency: 75, category: 'concept' },
+  ];
   ];
 
   useEffect(() => {

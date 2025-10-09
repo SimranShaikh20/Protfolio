@@ -10,6 +10,24 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "AI-Powered Customer Support Agent (Zapier) ",
+    description:
+      "Automated customer support using Zapier workflows with AI-generated responses from PDF brochures, confidence-based drafts, and WhatsApp alerts to reduce workload and ensure consistent communication.",
+    technologies: ["Support Agent", "Zapier", "Pdf Processing", "Automation"],
+    githubUrl: "https://github.com/SimranShaikh20/Support-Agent-Automation",
+    live_demo:
+      "https://agents.zapier.com/copy/191d15d7-9e96-42b2-a1f4-d13a2dd113a2",
+  },
+  {
+    title: "LinkedIn Content Generator",
+    description:
+      "Built an automated content creation tool using Lovable, n8n, and Groq API with webhook-based workflows for seamless LinkedIn post generation and personalized publishing",
+    technologies: ["Ai Agent", "N8N", "Lovable", "Automcation"],
+    githubUrl: "https://github.com/SimranShaikh20/LinkedIn-Content-Generator",
+    live_demo:
+      "https://linkedpost-ai-craft.lovable.app/",
+  },
+  {
     title: "AI Powered SEO Insight Hub ",
     description:
       "Intelligent SEO automation platform that replaces expensive manual audits with AI-driven analysis, delivering professional reports and actionable strategies for traffic growth.",
@@ -45,6 +63,14 @@ const projects: Project[] = [
     githubUrl: "https://github.com/SimranShaikh20/Smart-Resume-Assistant",
     live_demo:
       "https://smart-resume-assistant-4ztrqstzwr9krvd38d78r8.streamlit.app/",
+  },
+  {
+    title: "Fraud Transaction Detection using Machine Learning",
+    description:
+      "Implemented a Logistic Regression model for detecting fraudulent credit card transactions with preprocessing, class balancing, evaluation, and Streamlit integration for real-time predictions.",
+    technologies: ["Python", "Streamlit", "Machine learning", "Pandas", "Scikit-learn"],
+    githubUrl: "https://github.com/SimranShaikh20/Credit-Card-fraud-Detection",
+    live_demo:""
   },
   {
     title: "Smart Interview ChatBot",

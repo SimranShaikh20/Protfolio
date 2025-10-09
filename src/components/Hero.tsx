@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="max-w-2xl mx-auto">
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
               Computer Science student at MSU Vadodara with a passion for leveraging
-              technology to solve real-world problems. Proficient in Javascript and Python, working on
+              technology to solve real-world problems. Proficient in Javascript , Python, AI Automation working on
               projects that solve real world problems. Currently exploring the world of AI and ML.
             </p>
           </div>

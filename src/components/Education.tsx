@@ -18,7 +18,7 @@ const Education = () => {
       degree: "B.Tech in Computer Science & Engineering",
       institution: "Maharaja Sayajirao University Vadodara",
       date: "2023 - 2026",
-      grade: "CGPA: 8.37",
+      grade: "CGPA: 8.21",
       courses: [
         "Data Structures & Algorithms",
         "Database Management Systems",

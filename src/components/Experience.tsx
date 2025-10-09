@@ -21,7 +21,7 @@ const Experience = () => {
     {
       title: "Web Scraping Intern",
       company: "Keshav Encon",
-      date: "June 2024 - Present",
+      date: "June 2024 - Febr 2025",
       location: "Remote",
       details: [
         "Data Extraction: Boosted efficiency by 30% with Scrapy and Selenium.",
