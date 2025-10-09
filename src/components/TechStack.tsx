@@ -34,7 +34,7 @@ const TechStack = () => {
     { name: 'Automation', icon: 'fas fa-cogs', proficiency: 85, category: 'concept' },
     { name: 'Full Stack', icon: 'fas fa-layer-group', proficiency: 75, category: 'concept' },
   ];
-  ];
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
