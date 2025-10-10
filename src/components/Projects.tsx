@@ -9,6 +9,15 @@ type Project = {
 };
 
 const projects: Project[] = [
+  
+  {
+    title: "MindMesh AI - Multi-Agent Decision Support System",
+    description:
+      "Developed a multi-agent system using 6 specialized AI agents (Research, Pro/Con Advocates, Bias Checker, Fact Verifier, Synthesizer) that provides balanced recommendations 3-5x faster through parallel processing.",
+    technologies: ["Vibe Coding", "Ai Agent", "React", "Google Gemini Api" ],
+    githubUrl: "https://github.com/SimranShaikh20/MindMesh-AI",
+    live_demo: "https://mind-mesh-ai-two.vercel.app/", // No live demo for this project
+  },
   {
     title: "AI-Powered Customer Support Agent (Zapier) ",
     description:
@@ -86,14 +95,6 @@ const projects: Project[] = [
     description: "JobSeekerAI: Personalized Cold Email Automation for Job Outreach",
     technologies: ["LLM", "Python", "Groq API", "AI", "Git", "GitHub"],
     githubUrl: "https://github.com/SimranShaikh20/Cold-Email-Generator",
-    live_demo: "", // No live demo for this project
-  },
-  {
-    title: "Weather Application",
-    description:
-      "A Django app providing real-time city weather updates, including temperature, humidity, and wind speed via API integration.",
-    technologies: ["Python", "Django", "API", "JavaScript", "HTML", "CSS"],
-    githubUrl: "https://github.com/SimranShaikh20/WeatherApplication",
     live_demo: "", // No live demo for this project
   }
 ];
