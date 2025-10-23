@@ -1,4 +1,4 @@
-import { Github, Linkedin, ChevronDown, Book, BookOpen } from 'lucide-react';
+import { Github, Linkedin, ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -32,14 +32,13 @@ const Hero = () => {
             Simran Shaikh
           </h1>
           <p className="text-xl md:text-2xl font-medium mb-8 text-gray-700 dark:text-gray-300">
-            AI & ML Enthusiast | Technical Writer
+            AI & ML Enthusiast
           </p>
           <div className="max-w-2xl mx-auto">
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
               Computer Science student at MSU Vadodara with a passion for leveraging
-              technology to solve real-world problems. Proficient in Javascript, Python, AI Automation working on
+              technology to solve real-world problems. Proficient in Javascript , Python, AI Automation working on
               projects that solve real world problems. Currently exploring the world of AI and ML.
-              I also share my learning journey through technical writing on Medium and Dev Community.
             </p>
           </div>
           
@@ -61,24 +60,6 @@ const Hero = () => {
               aria-label="LinkedIn Profile"
             >
               <Linkedin className="text-gray-800 dark:text-gray-200" size={24} />
-            </a>
-            <a 
-              href="https://medium.com/@msusimran20" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
-              aria-label="Medium Blog"
-            >
-              <Book className="text-gray-800 dark:text-gray-200" size={24} />
-            </a>
-            <a 
-              href="https://dev.to/simranshaikh20_50" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
-              aria-label="Dev Community Profile"
-            >
-              <BookOpen className="text-gray-800 dark:text-gray-200" size={24} />
             </a>
           </div>
           

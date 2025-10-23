@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Calendar, MapPin, CheckCircle, BookOpen, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, CheckCircle } from 'lucide-react';
 
 interface TimelineItem {
   title: string;
@@ -7,10 +7,10 @@ interface TimelineItem {
   date: string;
   location: string;
   details: string[];
-  links?: {
+  link?: {
     text: string;
     url: string;
-  }[];
+  };
 }
 
 const Experience = () => {
@@ -19,31 +19,9 @@ const Experience = () => {
 
   const experienceData: TimelineItem[] = [
     {
-      title: "Technical Content Creator",
-      company: "Self-Employed",
-      date: "2024 - Present",
-      location: "Remote",
-      details: [
-        "Creating educational content on AI, ML, and web development concepts",
-        "Publishing technical tutorials and project walkthroughs on Medium and Dev Community",
-        "Documenting learning journey and sharing knowledge with developer community",
-        "Building personal brand through consistent technical writing"
-      ],
-      links: [
-        {
-          text: "Medium Profile",
-          url: "https://medium.com/@msusimran20"
-        },
-        {
-          text: "Dev Community Profile",
-          url: "https://dev.to/simranshaikh20_50"
-        }
-      ]
-    },
-    {
       title: "Web Scraping Intern",
       company: "Keshav Encon",
-      date: "June 2024 - February 2025",
+      date: "June 2024 - Febr 2025",
       location: "Remote",
       details: [
         "Data Extraction: Boosted efficiency by 30% with Scrapy and Selenium.",
@@ -61,12 +39,10 @@ const Experience = () => {
         "Contribution: Developed churn and research paper prediction models.",
         "Open-Source: Enhanced GitHub skills."
       ],
-      links: [
-        {
-          text: "Leaderboard",
-          url: "https://gssoc.girlscript.tech/leaderboard"
-        }
-      ]
+      link: {
+        text: "Leaderboard",
+        url: "https://gssoc.girlscript.tech/leaderboard"
+      }
     }
   ];
 
@@ -111,7 +87,7 @@ const Experience = () => {
     <section id="experience" ref={sectionRef} className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container px-4 mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-          Experience & Content Creation
+          Experience
         </h2>
         
         <div className="max-w-4xl mx-auto">
@@ -135,15 +111,8 @@ const Experience = () => {
                   {/* Content */}
                   <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'}`}>
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-1">{item.title}</h3>
-                          <h4 className="text-lg font-medium text-purple-600 dark:text-purple-400 mb-3">{item.company}</h4>
-                        </div>
-                        {item.title === "Technical Content Creator" && (
-                          <BookOpen size={24} className="text-teal-500 dark:text-teal-400 mt-1" />
-                        )}
-                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-1">{item.title}</h3>
+                      <h4 className="text-lg font-medium text-purple-600 dark:text-purple-400 mb-3">{item.company}</h4>
                       
                       <div className="flex items-center mb-2 text-gray-600 dark:text-gray-400">
                         <Calendar size={16} className="mr-2" />
@@ -164,20 +133,15 @@ const Experience = () => {
                         ))}
                       </ul>
                       
-                      {item.links && item.links.length > 0 && (
-                        <div className="flex flex-col space-y-2 mt-4">
-                          {item.links.map((link, linkIndex) => (
-                            <a 
-                              key={linkIndex}
-                              href={link.url} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="inline-flex items-center text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors"
-                            >
-                              {link.text} <ExternalLink size={16} className="ml-1" />
-                            </a>
-                          ))}
-                        </div>
+                      {item.link && (
+                        <a 
+                          href={item.link.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-block text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors mt-2"
+                        >
+                          {item.link.text} →
+                        </a>
                       )}
                     </div>
                   </div>
