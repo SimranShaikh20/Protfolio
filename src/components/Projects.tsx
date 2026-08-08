@@ -9,17 +9,61 @@ type Project = {
 };
 
 const projects: Project[] = [
-  
+  // --- Flagship projects from resume ---
+  // NOTE: replace the placeholder githubUrl values below with the real repo links —
+  // they weren't listed on the resume itself.
+  {
+    title: "SentinelRAG - Production-Hardened RAG API",
+    description:
+      "Deployed a RAG microservice behind FastAPI with an instruction-hierarchy guardrail blocking 95%+ of prompt-injection attempts and circuit-breaker fallback on failure. Cut p95 latency 45% (2.1s → 1.15s) and tokens/request 35%, scaling to 50+ req/sec, with full tracing/eval via LangSmith.",
+    technologies: ["Python", "FastAPI", "LangChain", "Redis", "LangSmith"],
+    githubUrl: "https://github.com/SimranShaikh20/SentinelRAG",
+    live_demo: "",
+  },
+  {
+    title: "HSN Classifier - PDF-Grounded HTS Trade Compliance Navigator",
+    description:
+      "Hierarchical HSN/HTS classifier built for Atlas Copco using zero-hallucination code-prefix tree traversal (Chapter → Heading → Subheading → Tariff line) sourced verbatim from HTS & GRI PDFs, invoking the LLM only for GRI 1-6 disambiguation, with a full audit trail for compliance traceability.",
+    technologies: ["Python", "Streamlit", "Azure OpenAI", "BM25", "pdfplumber"],
+    githubUrl: "https://github.com/SimranShaikh20/HSN-Classifier",
+    live_demo: "",
+  },
+  {
+    title: "Multi-Agent Code Review System",
+    description:
+      "Orchestrated 4 autonomous AI agents (Quality, Security, Performance, Documentation) in parallel with human-in-the-loop gates via TigerDB zero-copy forks, achieving 4x faster analysis (40s → 10s). 1st place, Agentic Postgres Challenge.",
+    technologies: ["TypeScript", "React", "PostgreSQL", "TigerDB", "LLM Agents"],
+    githubUrl: "https://github.com/SimranShaikh20/Multi-Agent-Code-Review-System",
+    live_demo: "",
+  },
+  {
+    title: "Casting Defect Detection - 12-Class Industrial CV Pipeline",
+    description:
+      "Built and published a novel 12-class industrial casting-defect image dataset; trained a ResNet-50 + EfficientNet-B3 ensemble with MixUp/CutMix augmentation and Test-Time Augmentation (TTA), cross-validated to 90%+ accuracy.",
+    technologies: ["Python", "PyTorch", "ResNet-50", "EfficientNet-B3", "OpenCV"],
+    githubUrl: "https://github.com/SimranShaikh20/Casting-Defect-Detection",
+    live_demo: "",
+  },
+  {
+    title: "Credit Risk Scoring - Production MLOps Pipeline",
+    description:
+      "End-to-end tabular-ML pipeline: trained and compared Logistic Regression, Random Forest, and XGBoost via RandomizedSearchCV with full MLflow tracking. Served via a Dockerized FastAPI microservice at ~20ms p50 latency, with a drift monitor and GitHub Actions CI/CD gating automated retraining alerts.",
+    technologies: ["Python", "scikit-learn", "XGBoost", "MLflow", "FastAPI", "Docker"],
+    githubUrl: "https://github.com/SimranShaikh20/Credit-Risk-Scoring",
+    live_demo: "",
+  },
+
+  // --- Additional / earlier projects ---
   {
     title: "MindMesh AI - Multi-Agent Decision Support System",
     description:
       "Developed a multi-agent system using 6 specialized AI agents (Research, Pro/Con Advocates, Bias Checker, Fact Verifier, Synthesizer) that provides balanced recommendations 3-5x faster through parallel processing.",
-    technologies: ["Vibe Coding", "Ai Agent", "React", "Google Gemini Api" ],
+    technologies: ["Vibe Coding", "Ai Agent", "React", "Google Gemini Api"],
     githubUrl: "https://github.com/SimranShaikh20/MindMesh-AI",
-    live_demo: "https://mind-mesh-ai-two.vercel.app/", // No live demo for this project
+    live_demo: "https://mind-mesh-ai-two.vercel.app/",
   },
   {
-    title: "AI-Powered Customer Support Agent (Zapier) ",
+    title: "AI-Powered Customer Support Agent (Zapier)",
     description:
       "Automated customer support using Zapier workflows with AI-generated responses from PDF brochures, confidence-based drafts, and WhatsApp alerts to reduce workload and ensure consistent communication.",
     technologies: ["Support Agent", "Zapier", "Pdf Processing", "Automation"],
@@ -30,20 +74,18 @@ const projects: Project[] = [
   {
     title: "LinkedIn Content Generator",
     description:
-      "Built an automated content creation tool using Lovable, n8n, and Groq API with webhook-based workflows for seamless LinkedIn post generation and personalized publishing",
-    technologies: ["Ai Agent", "N8N", "Lovable", "Automcation"],
+      "Built an automated content creation tool using Lovable, n8n, and Groq API with webhook-based workflows for seamless LinkedIn post generation and personalized publishing.",
+    technologies: ["Ai Agent", "N8N", "Lovable", "Automation"],
     githubUrl: "https://github.com/SimranShaikh20/LinkedIn-Content-Generator",
-    live_demo:
-      "https://linkedpost-ai-craft.lovable.app/",
+    live_demo: "https://linkedpost-ai-craft.lovable.app/",
   },
   {
-    title: "AI Powered SEO Insight Hub ",
+    title: "AI Powered SEO Insight Hub",
     description:
       "Intelligent SEO automation platform that replaces expensive manual audits with AI-driven analysis, delivering professional reports and actionable strategies for traffic growth.",
-    technologies: ["Agno Agent", "Fire crawl", "Exa Api", "Groq LLM"],
+    technologies: ["Agno Agent", "Firecrawl", "Exa Api", "Groq LLM"],
     githubUrl: "https://github.com/SimranShaikh20/seo-insighthub",
-    live_demo:
-      "https://seo-insightapp.streamlit.app/",
+    live_demo: "https://seo-insightapp.streamlit.app/",
   },
   {
     title: "AI Powered Grammar Spell Checker",
@@ -63,7 +105,6 @@ const projects: Project[] = [
     live_demo:
       "https://ai-powered-recruitment-assistant-napxpg8qcggtua5pd5llcy.streamlit.app/",
   },
- 
   {
     title: "Smart Resume Assistant (ATS)",
     description:
@@ -77,9 +118,9 @@ const projects: Project[] = [
     title: "Fraud Transaction Detection using Machine Learning",
     description:
       "Implemented a Logistic Regression model for detecting fraudulent credit card transactions with preprocessing, class balancing, evaluation, and Streamlit integration for real-time predictions.",
-    technologies: ["Python", "Streamlit", "Machine learning", "Pandas", "Scikit-learn"],
+    technologies: ["Python", "Streamlit", "Machine Learning", "Pandas", "Scikit-learn"],
     githubUrl: "https://github.com/SimranShaikh20/Credit-Card-fraud-Detection",
-    live_demo:""
+    live_demo: "",
   },
   {
     title: "Smart Interview ChatBot",
@@ -90,13 +131,13 @@ const projects: Project[] = [
     live_demo:
       "https://smart-interview-bot-b7pshyhw8syhmdzhf6q6mu.streamlit.app/",
   },
-   {
+  {
     title: "Cold Email Generator",
     description: "JobSeekerAI: Personalized Cold Email Automation for Job Outreach",
     technologies: ["LLM", "Python", "Groq API", "AI", "Git", "GitHub"],
     githubUrl: "https://github.com/SimranShaikh20/Cold-Email-Generator",
-    live_demo: "", // No live demo for this project
-  }
+    live_demo: "",
+  },
 ];
 
 const Projects = () => {

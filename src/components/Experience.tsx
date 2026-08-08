@@ -19,6 +19,17 @@ const Experience = () => {
 
   const experienceData: TimelineItem[] = [
     {
+      title: "AI / ML Intern",
+      company: "Atlas Copco Group",
+      date: "Jan 2026 - July 2026",
+      location: "On-site (Pune)",
+      details: [
+        "Trained and cross-validated ResNet transfer-learning and autoencoder models in PyTorch for industrial defect classification, tuning hyperparameters to achieve 80%+ accuracy",
+        "Engineered image-derived and statistical features across 10,000+ samples, reducing dimensionality 65% via PCA/autoencoders while preserving downstream model performance",
+        "Built a Python function-calling automation agent chaining 10+ REST APIs (Azure AD OAuth2) with structured-output patterns, replacing a 15-step manual workflow with one command and cutting onboarding time 80%"
+      ]
+    },
+    {
       title: "Technical Content Creator",
       company: "Self-Employed",
       date: "2024 - Present",
@@ -41,25 +52,25 @@ const Experience = () => {
       ]
     },
     {
-      title: "Web Scraping Intern",
+      title: "Web Scraping & Data Automation Intern",
       company: "Keshav Encon",
       date: "June 2024 - February 2025",
       location: "Remote",
       details: [
-        "Data Extraction: Boosted efficiency by 30% with Scrapy and Selenium.",
-        "Database: Improved MySQL performance by 20%.",
-        "UI: Built a Streamlit app, increasing engagement by 30%."
+        "Designed 5+ scraping pipelines (Scrapy, BeautifulSoup, Pandas, PostgreSQL) processing 100,000+ records for downstream feature extraction, with REST API integration and fault-tolerant retry middleware",
+        "Deployed Docker-containerised, CI/CD-scheduled workflows cutting manual data collection 60% and saving 10+ hrs/week",
+        "Improved MySQL performance by 20% and built a Streamlit app that increased engagement by 30%"
       ]
     },
     {
       title: "Open Source Contributor",
-      company: "GirlScript Summer of Code'24 Extd",
+      company: "GirlScript Summer of Code (GSSoC Extended)",
       date: "October 2024 - November 2024",
       location: "Remote",
       details: [
-        "Data Analysis & ML: Created visualizations for model predictions.",
-        "Contribution: Developed churn and research paper prediction models.",
-        "Open-Source: Enhanced GitHub skills."
+        "Merged 20+ PRs across ML tooling, data-pipeline, and GenAI repos — Top 5% of 7,000+ contributors globally",
+        "Reviewed 30+ peer PRs, reducing review cycle time by 25%",
+        "Developed churn and research paper prediction models with supporting visualizations"
       ],
       links: [
         {
@@ -113,25 +124,25 @@ const Experience = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
           Experience & Content Creation
         </h2>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-purple-200 dark:bg-purple-900 transform md:-translate-x-1/2"></div>
-            
+
             {experienceData.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className={`relative mb-12 transition-all duration-700 ${
-                  animatedItems.includes(index) 
-                    ? 'opacity-100 translate-y-0' 
+                  animatedItems.includes(index)
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
                 }`}
               >
                 <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                   {/* Timeline dot */}
                   <div className="absolute left-0 md:left-1/2 w-5 h-5 rounded-full bg-purple-500 transform -translate-y-1/2 md:-translate-x-1/2 z-10"></div>
-                  
+
                   {/* Content */}
                   <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'}`}>
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -144,17 +155,17 @@ const Experience = () => {
                           <BookOpen size={24} className="text-teal-500 dark:text-teal-400 mt-1" />
                         )}
                       </div>
-                      
+
                       <div className="flex items-center mb-2 text-gray-600 dark:text-gray-400">
                         <Calendar size={16} className="mr-2" />
                         <span>{item.date}</span>
                       </div>
-                      
+
                       <div className="flex items-center mb-4 text-gray-600 dark:text-gray-400">
                         <MapPin size={16} className="mr-2" />
                         <span>{item.location}</span>
                       </div>
-                      
+
                       <ul className="space-y-2 mb-3">
                         {item.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start">
@@ -163,15 +174,15 @@ const Experience = () => {
                           </li>
                         ))}
                       </ul>
-                      
+
                       {item.links && item.links.length > 0 && (
                         <div className="flex flex-col space-y-2 mt-4">
                           {item.links.map((link, linkIndex) => (
-                            <a 
+                            <a
                               key={linkIndex}
-                              href={link.url} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="inline-flex items-center text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium transition-colors"
                             >
                               {link.text} <ExternalLink size={16} className="ml-1" />
